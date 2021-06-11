@@ -27,7 +27,7 @@ module.exports.db_update = (req, res) => {
     // console.log('array of objects : ', r)
     let arr = []
     r.forEach(async (re) => {
-      let myUrl = `${process.env.ENDPOINT}${re.appId}`
+      let myUrl = `https://google-play-scraper-divs.herokuapp.com/appDetails?pkg=${re.appId}`
       let url = re.url
       let appId = re.appId
       let developer = re.developer
